@@ -2,12 +2,14 @@ import alt from '../libs/alt';
 import NoteActions from '../actions/NoteActions';
 import uuid from 'node-uuid';
 import NoteDndActions from '../actions/NoteDndActions';
+import update from 'react/lib/update';
 
 export default class NoteStore {
   constructor(actions: Object) {
     this.bindActions(actions);
+    this.bindActions(NoteDndActions);
 
-    this.notes = [];
+    
   }
 
   init(data) {
@@ -18,11 +20,11 @@ export default class NoteStore {
   
   create(task) {
     const notes = this.notes;
-    console.log('create')
 
     this.setState({
       notes: notes.concat({task, id: uuid.v4()})
     });
+
   }
 
   update({id, task}) {

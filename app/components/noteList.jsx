@@ -6,11 +6,11 @@ import NoteDndActions from '../actions/NoteDndActions';
 export default class NoteList extends React.Component {
 	
 	render(){
-		console.log(NoteDndActions.move)
 		var notes = this.props.items
 		var nodes = notes.map((note, index) => {
+			console.log(note)
 			return (
-			<Note onMove={NoteDndActions.move} className='note' key={'note' + index}>
+			<Note onMove={NoteDndActions.move} className='note' key={'note' + note.id} data={note}>
     			<Editable value={note.task} onEdit={this.props.onEdit.bind(null, index)} />
     		</Note>
 			)
