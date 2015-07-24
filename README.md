@@ -1,5 +1,5 @@
 # react-kanban
-Kanban board with drag and drop functionality, using React, Alt, React-Dnd, Babel Webpack
+Kanban board with drag and drop functionality, using React, Alt, React-Dnd, Babel Webpack </br>
 DEMO: http://react-kanban.surge.sh/
 
 Todo
